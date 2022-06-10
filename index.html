@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1400"> <!--화면을 줄여도 뭉개지지 않도록-->
+    <title>Seasonery</title>
+
+    <!--외부스타일 연결-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--파비콘-->
+    <link rel="icon" href="images/favicon.png" type="png" sizes="32x32"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@300&family=Montserrat:wght@500;600&display=swap" rel="stylesheet"> <!--Montserrat-Medium,Semibold-->
+
+    <!--제이쿼리 연결-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!--con3 이미지 슬라이드 css -->
+    <link href="css/swiper.css" rel="stylesheet" type="text/css"><!-- 수정X -->
+
+    <!-- con4 상품 슬라이드 css 
+    <link        rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    con4 상품 슬라이드 swiper 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->       <!--이 부분 con4 슬라이드 소스인데 적용하니까 con3 슬라이드 불릿버튼 css가 제대로 안 먹혀서 일단 주석. 근데 없어도 con4의 기능에는 문제가 없어보임.-->
+
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+    <div class="fixed"> <!--예약하기 고정 s-->
+        <a href="../seasonery_sub03/index.html">
+            <img src="images/fixed_booknow2.png" alt="픽스 예약하기">
+            <img src="images/fixed_booknow_rotate.png" alt="픽스 예약하기 회전" class="fixed_rotate">
+        </a>
+    </div> <!--예약하기 고정 f-->
+
+
+
+    <div id="top"> <!--메인 #eadfd0-->
+
+
+        <div class="header"> <!--header s-->
+
+            <a href="index.html" class="symbol">
+                <img src="images/symbol.png" alt="심볼">
+            </a>
+
+            <img src="images/logotype_small.png" alt="로고 스몰" class="logo_small">
+            
+            <div class="menu">
+                <a href="#" class="menubar">
+                    <img src="images/menubar.png" alt="메뉴바">
+                </a>
+                <div class="menubar_sub">
+                    <ul>
+                        <li><a href="#"><img src="images/menubar_mypage.png" alt="메뉴바 내정보"></a></li>
+                        <li><a href="#"><img src="images/menubar_cart.png" alt="메뉴바 장바구니"></a></li>
+                        <li><a href="#"><img src="images/menubar_talk.png" alt="메뉴바 톡"></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <ul class="nav">
+                <li> <!--부모-->
+                    <a href="../seasonery_sub01/index.html">ABOUT</a> <!--자식이지만 자기 자체가 부모-->
+                    <div class="sub1"> <!--자식2-->
+                        <ul>
+                            <li><a href="../seasonery_sub01/index.html">Story</a></li>
+                            <li><a href="#">For season</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../seasonery_sub02-1/index.html">ROOM</a>
+                    <div class="sub2">
+                        <ul>
+                            <li><a href="../seasonery_sub02-1/index.html">Flowery</a></li>
+                            <li><a href="#">Greenery</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../seasonery_sub03/index.html">RESERVATION</a></li>
+                <li><a href="../seasonery_sub04/index.html">SHOP</a></li>
+            </ul>
+
+        </div> <!--header f-->
+
+
+
+
+        <div class="main_img"> <!--main img s-->
+            <!--메인 이미지 back-->
+        </div>
+
+        <div class="main_img_1">
+            <!--메인 이미지2 back-->
+        </div> <!--main img f-->
+
+
+        <div class="main_wrap"> <!--main wrap s-->
+
+            <div class="main_right"> <!--main right s-->
+                <img src="images/logotype.png" alt="로고타입" data-aos="flip-up" data-aos-duration="2000">
+
+                <p><span class="suit_medium">사계절의 흐름이 그려내는 자연 속에서의 쉼</span><br>
+                각 계절의 경계는 흐려져 가지만 시즈너리의 사계절은 선명하고자 합니다.<br>
+                꽃과 식물이 자라나고 따스한 빛이 찰랑이는 봄,<br>
+                봄의 색채와 향기가 고스란히 내려앉은 시즈너리에 오신 것을 환영합니다.</p>
+
+                <div class="main_link" data-aos="slide-right" data-aos-duration="1500"> <!--about으로 이동하는 링크 s-->
+                    <a href="../seasonery_sub01/index.html">
+                        <img src="images/link_viewmore.png" alt="링크 더보기">
+                    </a>
+                    <div class="main_link_hover"><!--hover 상자--></div>
+                </div> <!--about으로 이동하는 링크 s-->
+            </div> <!--main right f-->
+
+        </div> <!--main wrap f-->
+
+
+    </div> <!--메인 f-->
+
+
+
+    <div id="con0_video"> <!--con0 영상 s-->
+        <video src="media.mp4" loop muted autoplay></video>
+    </div> <!--con0 영상 f-->
+
+
+
+    <div id="con1_wrap"> <!--con1 wrap s-->
+
+        <img src="images/con1_back_leaf2.png" alt="배경 잎2" class="con1_back_leaf2" data-aos="fade-right"  data-aos-delay="60">
+        <img src="images/con1_back_leaf1.png" alt="배경 잎1" class="con1_back_leaf1" data-aos="fade-left" data-aos-delay="30">
+        <img src="images/con1_back_leaf3.png" alt="배경 잎3" class="con1_back_leaf3" data-aos="fade-right">
+        <img src="images/con1_back_leaf4.png" alt="배경 잎4" class="con1_back_leaf4" data-aos="fade-left" data-aos-delay="90">
+        <img src="images/con1_back_leaf5.png" alt="배경 잎5" class="con1_back_leaf5" data-aos="fade-right">
+
+        <div class="con1"> <!--con1 s-->
+
+            <div class="con1_img1" data-aos="fade-up">
+                <a href="#">
+                    <img src="images/con1_img_spring_f.png" alt="con1 봄 이미지">
+                    <img src="images/con1_img_spring_b.png" alt="con1 봄 hover">
+                </a>
+            </div>
+
+            <div class="con1_img2" data-aos="fade-up" >
+                <a href="#">
+                    <img src="images/con1_img_summer_f.png" alt="con1 여름 이미지">
+                    <img src="images/con1_img_summer_b.png" alt="con1 여름 hover">
+                </a>
+            </div>
+
+            <div class="con1_img3"> <!--부모-->
+                <div class="con1_po" data-aos="fade-up">
+                    <a href="#">
+                        <img src="images/con1_img_fall_f.png" alt="con1 가을 이미지"> <!--자식1-->
+                        <img src="images/con1_img_fall_b.png" alt="con1 가을 hover" class="con1_position2"> <!--자식1-1-->
+                    </a>
+                </div>
+                <img src="images/con1_circle2.png" alt="con1 중심 원" class="con1_circle"> <!--중심 원 포지션. 자식2-->
+            </div>
+
+            <div class="con1_img4" data-aos="fade-up" >
+                <a href="#">
+                    <img src="images/con1_img_winter_f.png" alt="con1 겨울 이미지">
+                    <img src="images/con1_img_winter_b.png" alt="con1 겨울 hover">
+                </a>
+            </div>
+
+        </div> <!--con1 f-->
+
+
+    </div> <!--con1 wrap f-->
+
+
+
+    <div id="con2_wrap"> <!--con2 wrap s-->
+
+        <div class="con2_titleback" data-aos="slide-up" data-aos-easing="ease-out-quart" data-aos-delay="200" data-aos-duration="1000"> <!--con2 title back s-->
+            <img src="images/con2_title_back.png" alt="con2 제목 배경이미지">
+        </div> <!--con2 title back s-->
+
+        <div class="con2_imgback"> <!--con2 img back s-->
+            <div class="con2_inner_wrap">
+                <ul>
+                    <li>
+                        <img src="images/icon_garden.png" alt="아이콘 정원">
+                        <p class="con2_title">FLOWER GARDEN</p>
+                        <P class="con2_text">봄을 맞아 진달래, 튤립 정원을 조성하였습니다.<br>
+                        정원을 거닐고 사진도 찍으며<br>
+                        시즈너리의 봄을 마음껏 즐겨보세요.</P>
+                    </li>
+                    <li>
+                        <img src="images/icon_spray.png" alt="아이콘 스프레이">
+                        <p class="con2_title">FLOWER TEA</p>
+                        <P class="con2_text">환절기 면역력에 좋은 매화차,<br>
+                        소화와 혈액순환에 좋은 쑥차<br>
+                        머무르는 동안 티타임의 여유를 즐겨보세요.</P>
+                    </li>
+                    <li>
+                        <img src="images/icon_tea.png" alt="아이콘 티">
+                        <p class="con2_title">ROOM SPRAY</p>
+                        <P class="con2_text">봄을 알리는 매화 향을 담은<br>
+                        룸 스프레이를 객실마다 비치하였습니다.<br>
+                        상큼 달달한 공간을 연출해 보세요.</P>
+                    </li>
+                    <li>
+                        <img src="images/icon_bath bomb.png" alt="아이콘 입욕제">
+                        <p class="con2_title">BATH BOMB</p>
+                        <P class="con2_text">봄을 알리는 매화 향을 담은<br>
+                        입욕제를 객실마다 비치하였습니다.<br>
+                        지친 하루의 마무리가 향기롭길 바라요.</P>
+                    </li>
+                </ul>
+            </div>
+        </div> <!--con2 img back s-->
+
+    </div> <!--con2 wrap f-->
+
+
+
+    <div id="con3_wrap"> <!--con3 wrap s-->
+
+
+        <div class="con3_flowery"> <!--con3_flowery s-->
+
+            <div class="swiper-container"> <!--con3 왼쪽 슬라이드 이미지 s-->
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img  src="images/con3_flowery_slide4.jpg"  alt="con3 슬라이드 이미지4"></div>
+                  <div class="swiper-slide"><img src="images/con3_flowery_slide1.jpg" alt="con3 슬라이드 이미지1"></div>
+                  <div class="swiper-slide"><img src="images/con3_flowery_slide2.jpg" alt="con3 슬라이드 이미지2"></div>
+                  <div class="swiper-slide"><img src="images/con3_flowery_slide3.jpg" alt="con3 슬라이드 이미지3"></div>
+                </div>
+                <!-- 블릿 버튼 -->
+                <div class="swiper-pagination"></div>
+            </div> <!--con3 왼쪽 슬라이드 이미지 f-->
+
+            <div class="con3_flowery_textbox">
+                <img src="images/con3_title_flowery.png" alt="con3 타이틀 flowery"  data-aos="flip-up">
+                <p>무채색의 겨울이 지나고 아름답게 피어나는 봄꽃으로 가득한 방입니다.<br>
+                우아한 자태의 목련으로 꾸며진 패턴이 방을 더욱 화사하게 비춰주어<br>
+                다채롭고 향기로운 봄의 매력을 느끼실 수 있습니다.</p>
+                <ul class="con3_link"> <!--다른 객실 보기 s-->
+                    <li><a href="#">ROOM A</a></li>
+                    <li><a href="#">ROOM B</a></li>
+                </ul> <!--다른 객실 보기 f-->
+                
+                <div class="con3_pattern">
+                    <!--패턴 이미지 back-->
+                    <a href="../seasonery_sub02-1/index.html" class="pattern_link">
+                        <P class="pattern_text">VIEW DETAIL</P> <!--방 보러가기 link-->
+                    </a>
+                </div>
+            </div>
+
+        </div> <!--con3_flowery f-->
+
+        <div class="con3_greenery"> <!--con3_greenery s-->
+
+            <div class="con3_greenery_textbox">
+                <img src="images/con3_title_greenery.png" alt="con3 타이틀 flowery" data-aos="flip-up">
+                <p>한결같이 산뜻한 에너지를 풍기는 녹색의 풀과 잎으로 가득한 방입니다.<br>
+                고요한 정취가 흐르고 드넓게 펼쳐진 녹음을 연상케 합니다. <br>
+                봄 화초의 싱그럽고 활기찬 기운을 느끼실 수 있습니다.</p>
+                <ul class="con3_link"> <!--다른 객실 보기 s-->
+                    <li><a href="#">ROOM A</a></li>
+                    <li><a href="#">ROOM B</a></li>
+                </ul> <!--다른 객실 보기 f-->
+
+                <div class="con3_pattern2">
+                    <!--패턴 이미지 back-->
+                    <a href="#" class="pattern_link2">
+                        <P class="pattern_text">VIEW DETAIL</P> <!--방 보러가기 link-->
+                    </a>
+                </div>
+            </div>
+
+            <div class="con3_greenery_img"></div> <!--이미지 back-->
+
+        </div> <!--con3_greenery f-->
+
+
+    </div> <!--con3 wrap f-->
+
+
+
+    <div id="con4_back"></div> <!--미니타이틀 이미지 back-->
+
+    <div class="con4_titleback"> <!--con4 title back s-->
+        <img src="images/con4_title_back.png" alt="con4 제목 배경이미지">
+    </div> <!--con4 title back f-->
+
+    <div id="con4_wrap"> <!--con4 상품 이미지 슬라이드 wrap s. 원조 부모-->
+
+        <section id="section2"> <!--원조 부모의 자식1 s. 왜 있는지 모르겠음-->
+
+            <div class="sec2_slide_wrap"> <!--얘도 부모..? 원조 부모에 포지션X 새로운 부모 s-->
+
+                <div class="sec2_img_wrap"> <!--새로운 부모의 자식1. 슬라이드 영역 감싸는 wrap s-->
+
+
+                    <div class="sec2_slide">
+                        <img src="images/con4_slide3.jpg" alt="con4 상품1"> <!--상품1-->
+                        <div class="food"> <!--상품 이름 s-->
+                            <p>
+                              <a href="#">Plum blossom OIL PURFUME</a>
+                            </p>
+                            <div class="con1_cart"> <!--장바구니 wrap s-->
+                              <a href="#">
+                                <img src="images/like icon.png" alt="장바구니 아이콘">
+                                <img src="images/like icon_hover.png" alt="장바구니 아이콘 hover">
+                              </a>
+                            </div> <!--장바구니 wrap f-->
+                        </div> <!--상품 이름 f-->
+                    </div>
+
+                    <div class="sec2_slide">
+                        <img src="images/con4_slide6.jpg" alt="con4 상품2"> <!--상품2-->
+                        <div class="food"> <!--상품 이름 s-->
+                            <p>
+                              <a href="#">Magnolia Poly curtain</a>
+                            </p>
+                            <div class="con1_cart"> <!--장바구니 wrap s-->
+                              <a href="#">
+                                <img src="images/like icon.png" alt="장바구니 아이콘">
+                                <img src="images/like icon_hover.png" alt="장바구니 아이콘 hover">
+                              </a>
+                            </div> <!--장바구니 wrap f-->
+                        </div> <!--상품 이름 f-->
+                    </div>
+
+                    <div class="sec2_slide">
+                        <img src="images/images1.jpeg" alt="con4 상품3"> <!--상품3-->
+                        <div class="food"> <!--상품 이름 s-->
+                            <p>
+                              <a href="#">Magnolia Poly curtain</a>
+                            </p>
+                            <div class="con1_cart"> <!--장바구니 wrap s-->
+                              <a href="#">
+                                <img src="images/like icon.png" alt="장바구니 아이콘">
+                                <img src="images/like icon_hover.png" alt="장바구니 아이콘 hover">
+                              </a>
+                            </div> <!--장바구니 wrap f-->
+                        </div> <!--상품 이름 f-->
+                    </div>
+
+                    <div class="sec2_slide">
+                        <img src="images/con4_slide1.jpg" alt="con4 상품4"> <!--상품4-->
+                        <div class="food"> <!--상품 이름 s-->
+                            <p>
+                              <a href="#">Magnolia Cotton100% cushion</a>
+                            </p>
+                            <div class="con1_cart"> <!--장바구니 wrap s-->
+                              <a href="#">
+                                <img src="images/like icon.png" alt="장바구니 아이콘">
+                                <img src="images/like icon_hover.png" alt="장바구니 아이콘 hover">
+                              </a>
+                            </div> <!--장바구니 wrap f-->
+                        </div> <!--상품 이름 f-->
+                    </div>
+
+                    <div class="sec2_slide">
+                        <img src="images/con4_slide4.jpg" alt="con4 상품5"> <!--상품5-->
+                        <div class="food"> <!--상품 이름 s-->
+                            <p>
+                              <a href="#">Magnolia Organic bedding set</a>
+                            </p>
+                            <div class="con1_cart"> <!--장바구니 wrap s-->
+                              <a href="#">
+                                <img src="images/like icon.png" alt="장바구니 아이콘">
+                                <img src="images/like icon_hover.png" alt="장바구니 아이콘 hover">
+                              </a>
+                            </div> <!--장바구니 wrap f-->
+                        </div> <!--상품 이름 f-->
+                    </div>
+
+                    <div class="sec2_slide">
+                        <img src="images/images1.jpeg" alt="con4 상품6"> <!--상품6-->
+                        <div class="food"> <!--상품 이름 s-->
+                            <p>
+                              <a href="#">Magnolia Poly curtain</a>
+                            </p>
+                            <div class="con1_cart"> <!--장바구니 wrap s-->
+                              <a href="#">
+                                <img src="images/like icon.png" alt="장바구니 아이콘">
+                                <img src="images/like icon_hover.png" alt="장바구니 아이콘 hover">
+                              </a>
+                            </div> <!--장바구니 wrap f-->
+                        </div> <!--상품 이름 f-->
+                    </div>
+
+                    <div class="sec2_slide">
+                        <img src="images/con4_slide8.jpg" alt="con4 상품7"> <!--상품7-->
+                        <div class="food"> <!--상품 이름 s-->
+                            <p>
+                              <a href="#">Plum blossom ROOM SPRAY</a>
+                            </p>
+                            <div class="con1_cart"> <!--장바구니 wrap s-->
+                              <a href="#">
+                                <img src="images/like icon.png" alt="장바구니 아이콘">
+                                <img src="images/like icon_hover.png" alt="장바구니 아이콘 hover">
+                              </a>
+                            </div> <!--장바구니 wrap f-->
+                        </div> <!--상품 이름 f-->
+                    </div>
+
+
+                </div> <!--새로운 부모의 자식1. 슬라이드 영역 감싸는 wrap f-->
+
+                <div class="sec2_arrow_wrap"> <!--새로운 부모의 자식2. 화살표 s-->
+                    <div class="sec2_arrow sec2_left" data-aos="slide-left">
+                        <div class="hover_circle"></div> <!--hover시 원형-->
+                    </div>
+                    <div class="sec2_arrow sec2_right" data-aos="slide-right" data-aos-delay="60">
+                        <div class="hover_circle2"></div> <!--hover시 원형-->
+                    </div>
+                </div> <!--새로운 부모의 자식2. 화살표 f-->
+
+                <a href="../seasonery_sub04/index.html" class="button_view">SEE ALL PRODUCT</a> <!--새로운 부모의 자식3. 더보기 링크-->
+
+
+            </div> <!--얘도 부모..? 원조 부모에 포지션X 새로운 부모 s-->
+
+        </section> <!--원조 부모의 자식1 f. 왜 있는지 모르겠음-->
+
+    </div> <!--con4 상품 이미지 슬라이드 wrap f, 원조 부모-->
+
+
+
+    <div id="con5_wrap"> <!--con5 wrap s-->
+
+
+        <div class="con5_img"> <!--이미지 back 애니메이션 s-->
+
+            <div class="con5_profile">
+                <img src="images/con5_profile.png" alt="인스타 프로필">
+            </div>
+
+            <div class="con5_title">
+                <img src="images/con5_title.png" alt="인스타그램 타이틀">
+            </div>
+
+            <div class="con5_title_front">
+                <img src="images/con5_title_front.png" alt="인스타그램 타이틀 맨앞">
+            </div>
+
+            <div class="con5_link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50">
+                <a href="#">GO TO<br>INSTAGRAM</a>
+                <img src="images/con5_link_line.png" alt="링크 선" class="con5_link_line">
+            </div>
+
+        </div> <!--이미지 back 애니메이션 f-->
+
+
+    </div> <!--con5 wrap f-->
+
+
+
+    <div id="footer"> <!--footer s-->
+
+
+        <div class="footer_inner"> <!--footer inner s-->
+
+            <div class="footer_symbol"> <!--로고 s-->
+                <a href="index.html">
+                    <img src="images/footer_symbol.png" alt="푸터 심볼">
+                </a>
+                <img src="images/footer_logotype.png" alt="푸터 로고타입" class="footer_logotype">
+            </div> <!--로고 f-->
+
+            <ul class="footer_link"> <!--nav s-->
+                <li><a href="../seasonery_sub01/index.html">STORY</a></li>
+                <li><a href="../seasonery_sub02-1/index.html">ROOM Flowery</a></li>
+                <li><a href="../seasonery_sub03/index.html">RESERVATION</a></li>
+                <li><a href="../seasonery_sub04/index.html">SHOP</a></li>
+            </ul>
+
+            <ul class="footer_link link2">
+                <li><a href="#">For season</a></li>
+                <li><a href="#">ROOM Greenery</a></li>
+            </ul> <!--nav f-->
+
+            <ul class="footer_text"> <!--정보 s-->
+                <li>CONTACT</li>
+                <li>박주희</li>
+                <li class="montserrat">H.P. 010 - 0000 - 0000</li>
+                <li class="montserrat">E-mail. o_omi99@naver.com</li>
+                <li class="montserrat">Kakaotalk ID. s2sonery</li>
+            </ul>
+
+            <ul class="footer_text">
+                <li>OFFLINE SHOP</li>
+                <li class="montserrat">everyday OPEN</li>
+                <li class="montserrat">AM 10:00 - PM 18:00</li>
+                <li class="montserrat">Tel. 031 - 592 - 0000</li>
+                <li>경기도 남양주시 수동면 축령산로</li>
+            </ul> <!--정보 s-->
+
+            <p class="fnb">copyright ⓒ 2022 Seasonery all rights reserved.</p>
+            <p class="fnb2">사업자등록번호 <span class="montserrat">000-00-00000</span></p>
+            <a href="#" class="fnb2 hover">개인정보처리방침</a>
+            <a href="#" class="fnb2 hover">이용약관</a>
+
+        </div> <!--footer inner f-->
+
+
+    </div> <!--footer f-->
+
+
+
+
+    <!--aos-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!--con4 이미지 슬라이드 js-->
+    <script src="js/swiper.min.js"></script><!-- 수정X -->
+    <script src="js/slide.js"></script><!--디자인에 맞게 수정-->
+
+    
+</body>
+</html>
