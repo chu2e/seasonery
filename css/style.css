@@ -1,0 +1,1104 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+body{
+  font-family: 'SUIT-Medium';
+  color: #2e4e43;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+}
+
+/*SUIT-Medium*/ 
+
+@font-face {
+  font-family: 'SUIT-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*SUIT-Bold*/ 
+@font-face {
+  font-family: 'SUIT-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/*고정*/
+
+.fixed a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.fixed{
+  width: 116px;
+  height: 116px;
+  position: fixed; bottom: 40px; right: 40px;
+  z-index: 300; /*모든 포지션보다 최상단에 위치*/
+  
+}
+.fixed_rotate{
+  display: block;
+  width: 96px;
+  height: 96px;
+  position: fixed; bottom: 50px; right: 50px;
+  animation: fixed linear infinite 15s;
+}
+@keyframes fixed {
+  0%{transform: rotate(0deg);
+  }
+  100%{transform: rotate(360deg);
+  }
+}
+
+
+
+/*메인_배경*/
+
+#top{
+  background: url(../images/header_background.png) no-repeat top center;
+  width: 100%;
+  height: 950px;
+  background-size: cover;
+  position: relative; /*메인 이미지 두개 부모*/
+  overflow: hidden; /*메인 오른쪽 이미지 잘리게*/
+}
+
+
+
+/*헤더*/
+
+.header{
+  width: 1320px;
+  margin: 0 auto;
+  padding-top: 36px;
+  height: 105px;
+  box-sizing: border-box;
+}
+.header img{display: block; /*이미지 고유의 여백 제거*/
+}
+.symbol{
+  /* display: block; */
+  float: left;
+}
+.logo_small{
+  /* display: block; */
+  float: left;
+  padding-top: 16px;
+  margin-left: 55px;
+}
+
+.menu{
+  position: relative; /*부모 지정*/
+  float: right;
+  margin: 24px 0 24px 30px;
+  width: 30px;
+  height: 20px;
+}
+.menubar{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.menubar_sub{
+  width: 30px;
+  height: 141px;
+  background: url(../images/hover_menubar.png) no-repeat top center;
+  position: absolute; /*상위의 div에 대하여 자식 지정*/
+  top: 0;
+  left: 0;
+  z-index: 160;
+  display: none;
+}
+.menubar_sub ul{
+  padding: 38px 0 0 6px;
+}
+.menubar_sub ul li:nth-child(1){
+  width: 16px;
+  height: 17px;
+  padding-left: 1px;
+}
+.menubar_sub ul li:nth-child(2){
+  width: 18px;
+  height: 13px;
+  margin: 18px 0;
+}
+.menubar_sub ul li:nth-child(3){
+  width: 18px;
+  height: 18px;
+}
+.menubar_sub ul li:hover a img{
+  opacity: 0.8;
+}
+
+.nav{
+  float: right;
+}
+.nav>li{
+  float: left;
+  position: relative; /*부모 지정*/
+  z-index: 99;
+}
+.nav>li>a{
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #2e4e43;
+  padding: 21.5px 30px;
+  position: relative; /*상위의 li와 별개로 자기 자신에게 부모값을 줌*/
+  z-index: 99; /*더 낮은 숫자값을 주더라도 이 a 자기 자신 자체로 부모가 되기 때문에 순서 변경 없음*/
+}
+.nav>li:nth-child(3)>a,
+.nav>li:nth-child(4)>a {
+  transition-property:all; /*속성값*/
+  transition-duration:0.1s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+}
+.nav>li:nth-child(3):hover>a{
+  color: #718878;
+}
+.nav>li:nth-child(4):hover>a{
+  color: #718878;
+}
+
+
+
+/*서브메뉴*/
+
+.nav>li:nth-child(1):hover>a{
+  color: #eadfd0;
+}
+.nav>li:nth-child(2):hover>a{
+  color: #eadfd0;
+}
+/* .nav li:nth-child(1):hover .sub1{display: block;
+} */
+/* .nav li:nth-child(2):hover .sub2{display: block;
+} */
+
+.sub1{
+  position: absolute; top: -58.5px; left: 0; /*상위의 li에 대하여 자식 지정*/
+  background-color: #2e4e43;
+  width: 125.75px;
+  height: 220px;
+  background: url(../images/sub1_back.png) no-repeat center top;
+  display: none;
+}
+.sub1 ul{
+  margin-top: 125px;
+}
+.sub1 ul li a{
+  display: block;
+  color: #93a69c;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 10px;
+
+  transition-property:all; /*속성값*/
+  transition-duration:0.1s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+}
+.sub1 ul li a:hover{
+  color: #eadfd0;
+}
+
+.sub2{
+  position: absolute; top: -58.5px; left: 0;
+  background-color: #2e4e43;
+  width: 119.55px;
+  height: 220px;
+  background: url(../images/sub2_back.png) no-repeat center top;
+  display: none;
+}
+.sub2 ul{
+  margin-top: 125px;
+}
+.sub2 ul li a{
+  display: block;
+  color: #93a69c;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 10px;
+}
+.sub2 ul li a:hover{
+  color: #eadfd0;
+}
+
+
+
+/*메인_본문*/
+
+.main_wrap{
+  width: 1320px;
+  height: 845px;
+  margin: 0 auto;
+}
+
+.main_img{ /*왼쪽 메인 이미지*/
+  width: 1100px;
+  height: 720px;
+  border-radius: 0 360px 360px 0;
+  background: url(../images/mainimg2.jpg) no-repeat -200px -180px;
+  position: absolute; top: 109px; left: 0; /*top에 대한 자식*/
+  animation: mainleft 18s ease-in-out forwards; /*스르륵*/
+}
+@keyframes mainleft {
+  0%{background-position-x: -150px;}
+  40%{background-position-x: -650px;}
+  80%{background-position-x: 0;}
+  100%{background-position-x: -200px;}
+}
+.main_img_1{ /*오른쪽 메인 이미지*/
+  width: 400px;
+  height: 720px;
+  border-radius: 360px 0 0 360px;
+  background: url(../images/mainimg2.jpg) no-repeat -1400px -180px;
+  position: absolute; top: 109px; right: -280px; /*top에 대한 자식*/
+  animation: mainright 18s ease-in-out forwards; /*스르륵*/
+}
+@keyframes mainright {
+  0%{background-position-x: -1180px;}
+  40%{background-position-x: -1680px;}
+  80%{background-position-x: -1030px;}
+  100%{background-position-x: -1230px;}
+}
+
+.main_right{ /*메인 텍스트*/
+  width: 450px;
+  overflow: hidden; /*높이값 자동 지정*/
+  float: right;
+  margin-top: 246px;
+}
+.main_right img{
+  display: block; /*이미지 고유의 여백 제거*/
+}
+.main_right p{
+  margin-top: 36px;
+}
+.suit_medium{
+  font-family: 'SUIT-Bold';
+}
+
+.main_link{ /*about으로 이동하는 링크*/
+  width: 270px;
+  height: 35px;
+  margin-top: 80px;
+  position: relative; /*hover 상자의 부모*/
+}
+.main_link a{
+  display: block;
+}
+.main_link_hover{ /*hover시 선 움직이도록*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 10px;
+  background-color: #eadfd0;
+  transition-property:all; /*속성값*/
+  transition-duration:0.5s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+.main_link:hover .main_link_hover{
+  transform: scaleX(150); /*다 가리는 거 453*/
+}
+
+
+
+/*con0 영상*/
+
+#con0_video{
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+
+
+/*con1 사계절*/
+
+#con1_wrap{
+  width: 100%;
+  height: 1060px; /*con1의 아래 마진값을 포함한 wrap*/
+  overflow: hidden; /*자식인 배경 잎이 튀어나가는 부분을 잘라줌*/
+  position: relative; /*배경 잎과 본문의 부모*/
+}
+.con1{
+  width: 1320px;
+  height: 910px;
+  padding-bottom: 150px;
+  margin: 0 auto;
+  background: url(../images/con1_back.png) no-repeat right top; /*con1 미니 타이틀 back*/
+  position: absolute; /*자식1 본문. 잎보다 위에 있음*/
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 2;
+}
+
+.con1_back_leaf1{ /*나중에 잎들 움직임*/
+  position: absolute; /*자식2 잎. 잎보다 밑에 있음*/
+  top: 0;
+  right: -30px;
+  z-index: 1;
+}
+.con1_back_leaf2{ /*나중에 잎들 움직임*/
+  position: absolute;  
+  bottom: 207px;
+  left: -35px;
+  z-index: 1;
+}
+.con1_back_leaf3{ /*나중에 잎들 움직임*/
+  position: absolute;  
+  top: 0;
+  left: -15px;
+  z-index: 1;
+}
+.con1_back_leaf4{ /*나중에 잎들 움직임*/
+  position: absolute;  
+  bottom: 65px;
+  right: -30px;
+  z-index: 1;
+}
+.con1_back_leaf5{ /*나중에 잎들 움직임*/
+  position: absolute;  
+  bottom: -109px;
+  left: -101px;
+  z-index: 1;
+}
+
+.con1_img1{ /*봄*/
+  width: 460px;
+  height: 370px;
+  float: left;
+  margin-left: 100px;
+  position: relative; /*hover 이미지의 부모*/
+}
+.con1_img1 a,.con1_img2 a,.con1_img4 a{ /*hover 영역 이미지 모양에 맞게*/
+  display: block;
+  border-radius: 230px 230px 0 0;
+  overflow: hidden; /*얘를 지정하지 않으면 안 먹힘*/
+}
+.con1_img2{ /*여름*/
+  width: 460px;
+  height: 370px;
+  float: right;
+  margin-right: 100px;
+  margin-top: 85px;
+  position: relative; /*hover 이미지의 부모*/
+}
+.con1_img3{ /*가을*/
+  width: 460px;
+  height: 370px;
+  float: left;
+  margin-left: 100px;
+  margin-bottom: 85px;
+  margin-top: 85px;
+  position: relative; /*중심 원의 부모 지정*/
+}
+.con1_po{
+  z-index: 101; /*자식2보다 위에*/
+  width: 100%;
+  position: absolute; top: 0; left: 0; /*자식1*/
+  overflow: hidden;
+  border-radius: 230px 230px 0 0;
+}
+.con1_position2{
+  position: absolute; top: 0; left: 0; /*자식1-1*/
+  display: none;
+  overflow: hidden;
+  border-radius: 230px 230px 0 0;
+}
+
+.con1_img4{ /*겨울*/
+  width: 460px;
+  height: 370px;
+  float: right;
+  margin-right: 100px;
+  margin-top: 85px;
+  position: relative; /*hover 이미지의 부모*/
+}
+
+.con1_circle{
+  position: absolute; bottom: 85px; left: 50%; /*자식2*/
+  margin-left: 126px;
+  display: block;
+  width: 408px;
+  height: 476px;
+  z-index: 100; /*자식1보다 아래에*/
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.con1_img2 img:nth-child(1),
+.con1_img4 img:nth-child(1),
+.con1_img1 img:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+} 
+.con1_img2 img:nth-child(2),
+.con1_img4 img:nth-child(2),
+.con1_img1 img:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /*hover 전에는 안 보이게*/
+} 
+
+
+
+/*con2 배너*/
+
+#con2_wrap{
+  width: 100%;
+  height: 710px;
+  position: relative; /*imgback의 부모. titleback에 aos 없앨 거면 포지션 없애기*/
+}
+
+.con2_titleback{
+  width: 940px;
+  height: 210px;
+  margin: 0 auto;
+}
+.con2_titleback img{
+  display: block; /*이미지 고유의 여백 제거*/
+}
+
+.con2_imgback{
+  background: url(../images/con2_image_back.jpg) no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  position: absolute; /*con2 wrap의 자식. titleback에 aos 없앨 거면 포지션 없애기*/
+  top: 210px;
+  left: 0;
+}
+
+.con2_inner_wrap{
+  width: 1320px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 86.5px 0;
+  box-sizing: border-box;
+}
+.con2_inner_wrap ul{
+  width: 100%;
+}
+.con2_inner_wrap ul li{
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.con2_inner_wrap ul li:nth-child(1) img{
+  padding-bottom: 1px;
+}
+.con2_inner_wrap ul li:nth-child(4) img{
+  padding: 7px 0 4px 0;
+}
+.con2_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #718878;
+  letter-spacing: -0.03em;
+  margin-top: 43px;
+}
+.con2_text{
+  color: #718878;
+  margin-top: 30px;
+}
+
+
+
+/*con3 룸 타입*/
+
+#con3_wrap{ /*배경에 이미지 넣기 위해 con3에 마진값 안 넣고 div 두개를 만듦*/
+  width: 1320px;
+  height: 1500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: url(../images/con3_back.png) no-repeat top center; /*con3 미니 타이틀 back*/
+}
+
+.con3_flowery{ /*박스1*/
+  padding-top: 300px;
+  width: 100%;
+  height: 500px;
+}
+.con3_flowery_img{ /*왼쪽 이미지*/
+  width: 700px;
+  height: 500px;
+  border-radius: 0 250px 0 0;
+  background-color: #ccc;
+  float: left;
+}
+
+/*con3 왼쪽 슬라이드 이미지 slide 소스 s*/
+
+.swiper-container {
+  width: 700px;
+  height: 500px;
+  float: left;
+  border-radius: 0 250px 0 0;
+}
+.swiper-slide {
+  text-align: center; font-size: 18px; background: #fff;
+			  /* Center slide text vertically */
+			  display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: -webkit-flex;
+			  display: flex;
+			  -webkit-box-pack: center;
+			  -ms-flex-pack: center;
+			  -webkit-justify-content: center;
+			  justify-content: center;
+			  -webkit-box-align: center;
+			  -ms-flex-align: center;
+			  -webkit-align-items: center;
+			  align-items: center;
+      }
+.swiper-slide img{
+  width:100%;
+}
+/*블릿버튼 영역*/
+.swiper-pagination-bullet{background:#2e4e43; width:10px; height:10px; opacity:0.5;}
+.swiper-pagination-bullet-active{opacity:1;}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{bottom:10px;}
+
+/*con3 왼쪽 슬라이드 이미지 slide 소스 f*/
+
+
+.con3_flowery_textbox{ /*오른쪽 텍스트 박스*/
+  width: 450px;
+  height: 440px;
+  margin-top: 60px;
+  float: right;
+}
+
+.con3_flowery_textbox p{
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.con3_pattern{ /*Flowery 패턴 이미지*/
+  width: 100%;
+  height: 130px;
+  background: url(../images/con3_pattern.jpg) no-repeat left -420px;
+  border-radius: 65px 0 65px 0;
+  animation: infinite 12s linear infinite alternate; /*배경 이미지 계속 움직이게*/
+
+  transition-property:all; /*속성값*/
+  transition-duration:0.2s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+@keyframes infinite {
+  0%{background-position-y: -420px;}
+  100%{background-position-y: -220px;}
+}
+.pattern_link{ /*방 보러가기 링크*/
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 65px 0 65px 0;
+  overflow: hidden;
+}
+.pattern_text{ /*방 보러가기 링크*/
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  color: #2e4e43;
+  padding-top: 50px;
+  margin-left: 30px;
+  border-bottom: 2px solid #2e4e43;
+  display: inline-block;
+}
+.con3_pattern:hover{
+  border-radius: 65px;
+}
+
+.con3_link{ /*다른 객실 보기 링크*/
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.con3_link li{
+  float: left;
+  text-align: center;
+}
+.con3_link li:nth-child(1){
+  margin-right: 40px;
+}
+.con3_link li a{
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  color: #718878;
+  border: 2px solid #718878;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 30px;
+  transition-property:all; /*속성값*/
+  transition-duration:0.2s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+.con3_link li:hover a{
+  border-radius: 20px;
+}
+
+.con3_greenery{ /*박스2*/
+  padding-top: 200px;
+  width: 100%;
+  height: 500px;
+}
+
+.con3_greenery_img{ /*오른쪽 이미지*/
+  width: 700px;
+  height: 500px;
+  border-radius: 250px 0 0 0;
+  background: url(../images/con3_greenery_slide1.jpg) no-repeat top center;
+  float: right;
+}
+
+.con3_greenery_textbox{ /*오른쪽 텍스트 박스*/
+  width: 450px;
+  height: 440px;
+  margin-top: 60px;
+  float: left;
+}
+
+.con3_greenery_textbox p{
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.con3_pattern2{ /*Greenery 패턴 이미지*/
+  width: 100%;
+  height: 130px;
+  background: url(../images/con3_pattern.jpg) no-repeat left -300px;
+  border-radius: 0 65px 0 65px;
+  animation: infinite 12s linear infinite alternate; /*배경 이미지 계속 움직이게*/
+
+  transition-property:all; /*속성값*/
+  transition-duration:0.2s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+@keyframes infinite {
+  0%{background-position-y: -420px;}
+  100%{background-position-y: -220px;}
+}
+.con3_pattern2:hover{
+  border-radius: 65px;
+}
+.pattern_link2{ /*방 보러가기 링크*/
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 65px 0 65px;
+  overflow: hidden;
+}
+
+
+
+/*con4 shop*/ /*전체 wrap 없음*/
+
+#con4_back{
+  width: 1320px;
+  margin: 0 auto;
+  margin-top: 220px;
+  background: url(../images/con4_back.png) no-repeat top right; /*con4 미니 타이틀 back*/
+  height: 20px;
+}
+.con4_titleback{ /*con4 제목*/
+  width: 770px;
+  height: 130px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.con4_titleback img{
+  display: block; /*이미지 고유의 여백 제거*/
+}
+
+
+/*con4 상품 슬라이드 외부소스 s*/
+
+#con4_wrap { /*con4 상품 이미지 슬라이드 wrap*/
+  width: 100%;
+  height: 630px;
+  position: relative; /*원조 부모. 왜 있는지 모르겠음*/
+  overflow: hidden;
+}
+
+#section2{
+  width: 100%;
+  height: 630px;
+  position: absolute; /*원조 부모의 자식1. 왜 있는지 모르겠음*/
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+
+.sec2_slide_wrap{ /*원조 부모에 포지션X. 새로운 부모*/
+  width: 100%;
+  overflow: hidden;
+  height: 630px;
+  position: relative;
+}
+.sec2_img_wrap{ /*새로운 부모의 자식1. 슬라이드 영역 감싸는 wrap*/
+  width: 2700px;
+  height: 440px;
+  position: absolute;
+  top: 0;
+  left: -164px;
+}
+.sec2_slide{ /*상품 각각의 영역*/
+  float: left;
+  margin-right: 30px;
+}
+.sec2_slide>img{
+  display: block;
+  border: none;
+  width: 360px;
+  height: 380px;
+  /* cursor: url(../images/icon_search.png),auto; */
+  cursor: pointer;
+  transition-property:all; /*속성값*/
+  transition-duration:0.5s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+.sec2_slide>img:hover{ /*상품 이미지 hover시 투명도 조절*/
+  opacity: 0.8;
+}
+.sec2_slide:last-child{
+  margin-right: 0;
+}
+
+.food{ /*상품 이름 영역. 이름+장바구니 아이콘*/
+  width: 100%;
+  padding-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.015em;
+
+  overflow: hidden; /*높이값 자동 지정*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.food a{
+  color: #718878;
+  transition-property:all; /*속성값*/
+  transition-duration:0.2s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+}
+.food p:hover>a{
+  color: #93a69c;
+}
+.con1_cart{ /*con1 상품 장바구니 아이콘*/
+  width: 27px;
+  height: 20px;
+  position: relative; /*아이콘 각각의 부모*/
+}
+.con1_cart img:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 19;
+}
+.con1_cart img:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: none; /*안 보였다가 hover시 보임. 제이쿼리로 효과*/
+}
+
+.button_view{ /*더보기 링크*/
+  position: absolute; /*새로운 부모의 자식3*/
+  bottom: 4px;
+  left: 50%; /*가운데 정렬*/
+  transform: translateX(-50%);
+
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  color: #718878;
+  border: 2px solid #718878;
+  padding: 15px 35px;
+  box-sizing: border-box;
+  border-radius: 0 30px 0 30px;
+
+  transition-property:all; /*속성값*/
+  transition-duration:0.3s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+.button_view:hover{ /*hover시 외곽 둥글어지게*/
+  border-radius: 30px;
+}
+
+.sec2_arrow_wrap{ /*화살표 2개 감싸는 wrap*/
+  width: 1320px;
+  height: 32px;
+  position: absolute; /*새로운 부모의 자식2*/
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.sec2_left{ /*왼쪽 화살표*/
+  width: 121px;
+  height: 32px;
+  background: url(../images/con4_leftallow.png) no-repeat center top;
+  cursor: pointer;
+  position: relative;
+}
+.sec2_right{ /*오른쪽 화살표*/
+  width: 121px;
+  height: 32px;
+  background: url(../images/con4_rightallow.png) no-repeat center top;
+  cursor: pointer;
+  position: relative;
+}
+.hover_circle{ /*화살표 hover시 나타나는 원형*/
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #718878;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -20px;
+  left: -16px;
+  display: none; /*제이쿼리로 효과*/
+}
+
+.hover_circle2{ /*화살표 hover시 나타나는 원형*/
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #718878;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -20px;
+  right: -16px;
+  display: none; /*제이쿼리로 효과*/
+}
+
+/*con4 상품 슬라이드 외부소스 f*/
+
+
+
+
+/*con5 인스타그램*/
+
+#con5_wrap{ /*배경 feather 이미지*/
+  background: url(../images/con5_back.png) top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1110px;
+  padding-top: 220px; /*콘텐츠 사이의 마진값을 wrap의 패딩으로*/
+  padding-bottom: 150px;
+  box-sizing: border-box;
+}
+
+.con5_img{ /*이미지 슬라이드 나중에 제이쿼리*/
+  width: 500px;
+  height: 630px;
+  border-radius: 250px;
+  background-color: #ccc;
+  margin: 0 auto;
+  margin-top: 110px;
+  background: url(../images/con5_img1.jpg) no-repeat center top;
+  position: relative; /*이것을 기준으로 요소들 배치*/
+  animation: fade ease 26s infinite forwards;
+}
+@keyframes fade {
+  0%{background: url(../images/con5_img1.jpg) no-repeat center top;}  
+  15%{background: url(../images/con5_img3.jpg) no-repeat top center;}  
+  30%{background: url(../images/con5_img2.jpg) no-repeat top center;}  
+  46%{background: url(../images/con5_img4.jpg) no-repeat top center;}  
+  60%{background: url(../images/con5_img6.jpg) no-repeat top center;}  
+  75%{background: url(../images/con5_img7.jpg) no-repeat top center;}  
+  90%{background: url(../images/con5_img8.jpg) no-repeat top center;}  
+}
+
+.con5_profile{
+  position: absolute; /*con5 이미지에 대한 자식*/
+  top: -95px;
+  left: -225px;
+}
+
+.con5_title{
+  position: absolute; /*con5 이미지에 대한 자식*/
+  top: -120px;
+  left: 117px;
+}
+
+.con5_title_front{
+  position: absolute; /*con5 이미지에 대한 자식*/
+  top: 42px;
+  right: 73px;
+}
+
+.con5_link{ /*con5 인스타그램 링크*/
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #718878;
+  position: absolute; /*con5 이미지에 대한 자식*/
+  top: 173px;
+  right: -370px;
+}
+.con5_link a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /*hover 영역 둥글게*/
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  color: #718878;
+  padding-top: 67px;
+  box-sizing: border-box;
+}
+.con5_link_line{ /*hover시 움직이도록*/
+  position: absolute; /*con5_link가 부모. 왜인지는 모르겠음*/
+  top: 50%;
+  left: -200px;
+  transition-property:all; /*속성값*/
+  transition-duration:0.3s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+.con5_link:hover .con5_link_line{
+  transform: translateX(140px);
+}
+
+
+
+/*footer*/
+
+#footer{ /*푸터_배경*/
+  width: 100%;
+  height: 500px;
+  background: url(../images/footer_background.png) no-repeat top center;
+  background-size: cover;
+  padding-top: 170px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+.footer_inner{
+  width: 1320px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer_symbol{
+  float: left;
+  margin-top: 5px;
+}
+.footer_symbol a{
+  display: block;
+  width: 77px;
+  margin-left: 15px;
+  height: 100px;
+}
+.footer_logotype{
+  display: block;
+  margin-top: 10px;
+}
+
+.footer_link{ /*nav*/
+  float: left;
+  margin-left: 60px;
+}
+.footer_link li a{
+  display: block;
+  color: #718878;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 2px 0;
+}
+.footer_link li a:hover{ /*링크 hover시 색상 변환*/
+  color: #93a69c;
+}
+
+.footer_text{ /*정보*/
+  float: right;
+  margin-left: 100px;
+}
+.footer_text li{
+  font-size: 14px;
+  color: #718878;
+  letter-spacing: 0;
+  padding: 2px 0;
+  line-height: 24px;
+}
+.footer_text li:nth-child(1){
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.015em;
+}
+.montserrat{ /*영어텍스트 폰트변경*/
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fnb{
+  clear: both;
+  float: left;
+  color: #718878;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 100px;
+}
+.fnb2{
+  color: #718878;
+  font-size: 14px;
+  letter-spacing: 0;
+  float: right;
+  margin-left: 70px;
+  margin-top: 100px;
+}
+.hover:hover{ /*링크 hover시 색상 변환*/
+  color: #93a69c;
+}
