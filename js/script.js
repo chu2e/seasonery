@@ -138,6 +138,15 @@ $(function(){
   });
 });
 
+$(function(){
+  $(".sec2_img_wrap>div:nth-child(8) .con1_cart").mouseenter(function(){
+    $(".sec2_img_wrap>div:nth-child(8) .con1_cart img:nth-child(2)").stop().fadeIn(200);
+  });
+  $(".sec2_img_wrap>div:nth-child(8) .con1_cart").mouseleave(function(){
+    $(".sec2_img_wrap>div:nth-child(8) .con1_cart img:nth-child(2)").stop().fadeOut(200);
+  });
+});
+
 
 
 /*con4 화살표 hover*/

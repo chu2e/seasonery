@@ -470,6 +470,7 @@ body{
   width: 100%;
   height: 710px;
   position: relative; /*imgback의 부모. titleback에 aos 없앨 거면 포지션 없애기*/
+  margin-top: 20px;
 }
 
 .con2_titleback{
@@ -531,7 +532,7 @@ body{
 
 #con3_wrap{ /*배경에 이미지 넣기 위해 con3에 마진값 안 넣고 div 두개를 만듦*/
   width: 1320px;
-  height: 1500px;
+  height: 1520px;
   margin: 0 auto;
   margin-top: 20px;
   background: url(../images/con3_back.png) no-repeat top center; /*con3 미니 타이틀 back*/
@@ -550,15 +551,21 @@ body{
   float: left;
 }
 
-/*con3 왼쪽 슬라이드 이미지 slide 소스 s*/
+/*con3 슬라이드 이미지 slide 소스 s*/
 
-.swiper-container {
+.swiper-container { /*공통 속성값*/
   width: 700px;
   height: 500px;
+}
+.swiper_a{ /*flowery 위치값*/
   float: left;
   border-radius: 0 250px 0 0;
 }
-.swiper-slide {
+.swiper_b{ /*greenery 위치값*/
+  border-radius: 250px 0 0 0;
+  float: right;
+}
+.swiper-slide { /*공통 속성값*/
   text-align: center; font-size: 18px; background: #fff;
 			  /* Center slide text vertically */
 			  display: -webkit-box;
@@ -582,7 +589,7 @@ body{
 .swiper-pagination-bullet-active{opacity:1;}
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{bottom:10px;}
 
-/*con3 왼쪽 슬라이드 이미지 slide 소스 f*/
+/*con3 슬라이드 이미지 slide 소스 f*/
 
 
 .con3_flowery_textbox{ /*오른쪽 텍스트 박스*/
@@ -666,17 +673,9 @@ body{
 }
 
 .con3_greenery{ /*박스2*/
-  padding-top: 200px;
+  padding-top: 220px;
   width: 100%;
   height: 500px;
-}
-
-.con3_greenery_img{ /*오른쪽 이미지*/
-  width: 700px;
-  height: 500px;
-  border-radius: 250px 0 0 0;
-  background: url(../images/con3_greenery_slide1.jpg) no-repeat top center;
-  float: right;
 }
 
 .con3_greenery_textbox{ /*오른쪽 텍스트 박스*/
@@ -766,7 +765,7 @@ body{
   position: relative;
 }
 .sec2_img_wrap{ /*새로운 부모의 자식1. 슬라이드 영역 감싸는 wrap*/
-  width: 2700px;
+  width: 3090px;
   height: 440px;
   position: absolute;
   top: 0;
