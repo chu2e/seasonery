@@ -693,7 +693,7 @@ body{
 .con3_pattern2{ /*Greenery 패턴 이미지*/
   width: 100%;
   height: 130px;
-  background: url(../images/con3_pattern.jpg) no-repeat left -300px;
+  background: url(../images/con3_pattern2.jpg) no-repeat left -300px;
   border-radius: 0 65px 0 65px;
   animation: infinite 12s linear infinite alternate; /*배경 이미지 계속 움직이게*/
 
